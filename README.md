@@ -1,4 +1,5 @@
-# todolist
+# todo demo
+typescript + vue3
 
 ## Project setup
 ```
