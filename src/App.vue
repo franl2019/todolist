@@ -20,7 +20,6 @@ export default defineComponent({
     const { setTodoList }:IUseTodo = useTodo();
     const store:Store<any> = useStore()
 
-
     onMounted(()=>{
         setTodoList();
     })

@@ -11,7 +11,7 @@
     <button @click="removeTodo(item.id)">删除</button>
     <button
       v-if="item.status !== FINISH"
-      :class="item.statu === DOING ? 'doing' : 'want'"
+      :class="item.status === DOING ? 'doing' : 'want'"
       @click="setDoing(item.id)"
     >
       {{ item.status === DOING ? "正在做..." : "马上做" }}
@@ -26,7 +26,11 @@ import { defineComponent, PropType } from "vue";
 export default defineComponent({
   name: "TodoItem",
   props: {
-    item: Object as PropType<ITodo>,
+    item:{
+            type:Object as PropType<ITodo>,
+            required:true,
+            default:{}
+        }
   },
   setup(props, { emit }) {
 
@@ -58,6 +62,7 @@ export default defineComponent({
       removeTodo,
       setStatus,
       setDoing,
+
     };
   },
 });
