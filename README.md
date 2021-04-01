@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # todoList demo
 typescript + vue3
 
