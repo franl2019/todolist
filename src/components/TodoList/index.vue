@@ -21,7 +21,10 @@ export default defineComponent({
     TodoItem,
   },
   props: {
-    todoList: Array as PropType<ITodo[]>,
+    todoList: {
+      type: Array as PropType<ITodo[]>,
+      required:true,
+      default:[]
   },
   setup() {
     const { removeTodo, setStatus, setDoing } = useTodo();
